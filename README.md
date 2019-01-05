@@ -18,7 +18,7 @@
 7. Open the video and check the result.
 
 ## C. Video Credits:
-All over in 10 seconds - Ian Rushton
+All over in 10 seconds - Ian Rushton.
 Link : https://www.youtube.com/watch?v=rUWxSEwctFU
 
 ## Cheers!
