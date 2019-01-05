@@ -17,4 +17,8 @@
 6. The program will run successfully and you will see the desired output processed video in the folder: "output_processed_video".
 7. Open the video and check the result.
 
+## C. Video Credits:
+All over in 10 seconds - Ian Rushton
+Link : https://www.youtube.com/watch?v=rUWxSEwctFU
+
 ## Cheers!
