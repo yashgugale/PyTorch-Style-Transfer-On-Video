@@ -1,13 +1,13 @@
 # Import the necessary packages:
-import numpy as np								# Numpy computations
-import cv2										# OpenCV computations
-from PIL import Image							# Python Image Library for image processing
-import matplotlib.pyplot as plt 				# Plotting
-import torch 									# Neural network computation
-from torch import optim							# optimizer to minimize the loss function
+import numpy as np					# Numpy computations
+import cv2						# OpenCV computations
+from PIL import Image					# Python Image Library for image processing
+import matplotlib.pyplot as plt 			# Plotting
+import torch 						# Neural network computation
+from torch import optim					# optimizer to minimize the loss function
 from torchvision import transforms, models		# Transformations on images and pre-trained models
-import os, os.path 								# To count the number of image files, make dirs, etc
-import sys										# To read the command line arguments
+import os, os.path 					# To count the number of image files, make dirs, etc
+import sys						# To read the command line arguments
 
 # Names for the directories storing the input content and style frames, style transferred frames and processed video:
 content_frame_dir = "input_content_frames"
@@ -202,7 +202,7 @@ def apply_style_transfer(content_img_dir, style_img_dir):
 		# Update the target image (as we update the model.parameters() in the classifiers):
 		optimizer = optim.Adam([target_image], lr=0.003)
 		# Number of iterations to update your image:
-		steps = 2
+		steps = 2000
 		show_every = 1000
 		for ii in range(1, steps+1):
 
@@ -238,7 +238,7 @@ def apply_style_transfer(content_img_dir, style_img_dir):
 			# Update the target image:
 			optimizer.zero_grad()			# zero out the gradients from previous iterations
 			total_loss.backward()			# Backpropagate the loss
-			optimizer.step()				# Update the target image
+			optimizer.step()			# Update the target image
 
 			# Display the intermediate results if required:
 			#if ii % show_every == 0:
